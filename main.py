@@ -18,7 +18,8 @@ def find_mismatch(text):
             pass
 
         if next in ")]}":
-            # Process closing bracket, write your code here
+            # Prss closi
+            # #ng bracket, write your code here
             pass
 
 
