@@ -22,14 +22,18 @@ def find_mismatch(text):
 
         if next in ")]}":
             # Prss closing bracket, write your code here
-            if are_matching(opening_brackets_stack[-1].char,next) == False:
-                opening_brackets_stack.pop()
+            if opening_brackets_stack == [] or are_matching(opening_brackets_stack[-1].char,next) == False :
+                
                 return i + 1
+            else:
+                opening_brackets_stack.pop()
+                
             
 
-    if opening_brackets_stack:
+    if opening_brackets_stack == []:
         return  "Success"
-
+    else:
+        return opening_brackets_stack[-1].position + 1
     
 def main():
     text = input()
