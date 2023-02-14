@@ -17,19 +17,20 @@ def find_mismatch(text):
             # Process opening bracket, write your code here
         
             opening_brackets_stack.append(Bracket(next,i))
-            return i
+            
             
 
         if next in ")]}":
             # Prss closing bracket, write your code here
-            if are_matching(opening_brackets_stack.pop(),next) == False :
+            if are_matching(opening_brackets_stack[-1].char,next) == False:
+                opening_brackets_stack.pop()
                 return i + 1
             
 
-    if opening_brackets_stack == []:
-        return "Success"
-    else:
-        return
+    if opening_brackets_stack:
+        return  "Success"
+
+    
 def main():
     text = input()
     if text == "I":
