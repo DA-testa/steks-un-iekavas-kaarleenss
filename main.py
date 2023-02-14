@@ -1,4 +1,5 @@
 # python3
+#Labd1
 
 from collections import namedtuple
 
@@ -29,3 +30,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#jauns teksts prieks parbaudem
